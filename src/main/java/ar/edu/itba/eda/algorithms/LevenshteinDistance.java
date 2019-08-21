@@ -28,4 +28,9 @@ public class LevenshteinDistance {
         }
         return matrix[str1.length()][str2.length()];
     }
+
+    public static double normalizedLevenshteinDistance(String str1, String str2){
+        return 1d - ((double)(levenshteinDistance(str1, str2))/Math.max(str1.length(), str2.length()));
+
+    }
 }
